@@ -1,0 +1,55 @@
+<!DOCTYPE html>  
+<html>  
+    <head>
+        <meta charset="UTF-8">
+        <title>Cálculo de tu pensión por jubilación</title>
+        <link rel="stylesheet" href="C:/Users/lopez/Documents/My Web Sites/WebSite2/css/index.css">
+    </head>
+    <body>
+        <section class="sec1">
+            <div class="marco1">
+                <video src="C:/Users/lopez/Documents/My Web Sites/WebSite2/imagvid/video2.mp4" autoplay muted loop></video>
+                <div class="present">
+                    <h1>Cálculo de pensión por jubilación</h1>
+                </div>
+                <div class="Formulario">
+                    <h2>Introduzca sus datos personales:</h2>
+
+                    <p>Año de nacimiento: <input class="anios" id="annacim" type="text" onchange="comprueba1empl('annacim')"></p>
+                    <p class="anniosP" id="nacim"></p>
+                    <p class="anniosP" id="anniosMns"></p>
+
+                    <div class="entradas">
+                        <div class="letreros">
+                            <p>Año del primer empleo: </p>
+                            <p>Año del último empleo: </p>
+                            <p>Años trabajados: </p>
+                            <p>Años faltantes para conseguir 100%: </p>
+                        </div>
+                        <div class="inputs">
+                            <input class="anios" id="Pempl" type="text" onchange="comprueba1empl('Pempl')">
+                            <input class="anios" id="Uempl" type="text" onchange="comprueba1empl('Uempl')">
+                            <input class="anios" id="antrab" type="text" onchange="compruebaAT()">
+                            <input class="anios" id="anfalt" type="text">
+                        </div>
+                    </div>
+
+                    <h2>Base reguladora:</h2>
+                    <p>Importe Bruto: <input type="text" class="base" id="basereg" onchange="compruebaIBR()"> *media del salario bruto percibido durante los últimos 300 meses trabajados</p>
+                    <p class="base" id="baseregC">Porcentaje correspondiente:</p>
+
+                    <div class="botones">
+                        <input id="calc" type="button" onclick="calcular()" value="Calcular">
+                        <input id="borra" type="button" onclick="borrar()" value="Borrar">
+                    </div>
+                </div>
+                <div class="result" id="divresult">
+                    <h3>Resultado:</h3>
+                    <p class="resultado" id="result"></p>
+                    <p class="resultado" id="irpf"></p>
+                </div>
+            </div>
+        </section>
+        <script src="C:/Users/lopez/Documents/My Web Sites/WebSite2/css/Index.js"></script>      
+    </body>
+</html>
